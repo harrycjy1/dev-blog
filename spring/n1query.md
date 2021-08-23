@@ -1,6 +1,6 @@
 # N+1 Query
 
-사용환경 : Kotlin, Spring Boot 2
+> 사용환경 : Kotlin, Spring Boot 2
 
 ### _N+1 Query?_ 연관관계가 설정 되어있는 엔티티를 조회할 때 나오는 문제로써  조회된 엔티티의 개수 만큼\(n\) 엮여 있는 엔티티를 추가로 조회해오는 문제
 

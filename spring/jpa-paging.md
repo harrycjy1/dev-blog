@@ -4,8 +4,6 @@ description: Jpa pagination 최적화 고민
 
 # JPA Paging
 
-
-
 > 사용환경 : Kotlin, Spring Boot 2, Postgresql
 
 ### _Paging??_
