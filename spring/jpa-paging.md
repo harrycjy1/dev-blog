@@ -118,5 +118,5 @@ In memory pagination was about to be applied. Failing because 'Fail on paginatio
 nested exception is org.hibernate.HibernateException: firstResult/maxResults specified with collection fetch. In memory pagination was about to be applied. Failing because 'Fail on pagination over collection fetch' is enabled.
 ```
 
-라는 에러를 띄우니 설정을 해둔채 개발하는것을 추천한다.
+에러를 띄우니 설정을 해둔채 개발하는것을 추천한다.
 
