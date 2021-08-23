@@ -100,3 +100,23 @@ Hibernate:
 
 수정한 쿼리는 yml을 수정한 후 fetch 조인 부분을 제거했다.  실행된 쿼리를 보면 team을 조회하고 member의 수만큼 \(3개\) in 쿼리가 실행된 것을 확인할 수 있다.  만약 조회하는 멤버의 수가\(n\) batch\_size보다 크다면 batch\_size로 나눈 횟수만큼 실행된다.
 
+> 추가
+>
+> HHH000104 warning 같은 경우 실제 배포 환경에서 심각한 문제가 될 수 있다. 이를 위해 
+>
+> **fail\_on\_pagination\_over\_collection\_fetch** 라는 ****설정을 제공한다.
+
+```text
+spring.jpa.properties.hibernate.query.fail_on_pagination_over_collection_fetch : true
+```
+
+해당 설정 후 실행된 쿼리가 HHH000104 warning을 띄우는 쿼리 일 경우 
+
+```text
+Caused by: org.springframework.orm.jpa.JpaSystemException: firstResult/maxResults specified with collection fetch. 
+In memory pagination was about to be applied. Failing because 'Fail on pagination over collection fetch' is enabled.; 
+nested exception is org.hibernate.HibernateException: firstResult/maxResults specified with collection fetch. In memory pagination was about to be applied. Failing because 'Fail on pagination over collection fetch' is enabled.
+```
+
+라는 에러를 띄우니 해당 설정을 두 개발하는것을 추천한다.
+
