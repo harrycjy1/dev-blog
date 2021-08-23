@@ -4,5 +4,5 @@
 
 ## Spring
 
-* [N+1Query](spring/n1query.md)
+* [N+1 Query](spring/n1query.md)
 

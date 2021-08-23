@@ -1,4 +1,4 @@
-# N+1Query
+# N+1 Query
 
 사용환경 : Kotlin, Spring Boot 2
 
