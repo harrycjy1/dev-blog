@@ -4,6 +4,9 @@
 
 ## Spring
 
-* [N+1 Query](spring/n1query.md)
-* [JPA Paging](spring/jpa-paging.md)
+* [JPA](spring/jpa/README.md)
+  * [N+1 Query](spring/jpa/n1query.md)
+  * [JPA Paging](spring/jpa/jpa-paging.md)
+
+## activeMQ
 
